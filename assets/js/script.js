@@ -60,7 +60,7 @@ class Blockchain {
                 for (var key in block.data) {
                     let newLabel = createNewElement("DIV", key + ": ");
                     let newValue = createNewElement("SPAN", block.data[key] + " ");
-                    newLabel.className = "chainLabel";
+                    newLabel.className = "chainLabel dataLabel";
                     newLabel.appendChild(newValue);
                     appendToDiv.appendChild(newLabel)
                 }
@@ -175,7 +175,6 @@ startTime();
 //initialise listener
 const generateBtn = document.getElementById("generateButton");
 generateBtn.addEventListener("click", function(){
-
     const ticks = document.querySelectorAll(".tick");
     ticks.forEach(function(tick){
         tick.classList.add("hidden");
@@ -196,10 +195,7 @@ generateBtn.addEventListener("click", function(){
         sdeaghCoin.displayLatest();
 
     }, 1000)
-
-
 })
-
 
 
 

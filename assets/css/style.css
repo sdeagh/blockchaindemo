@@ -114,6 +114,14 @@ h3, h2 {
     text-transform: capitalize;
 }
 
+.dataLabel {
+    padding-left: 32px;
+}
+
+.modal{
+    color: black;
+}
+
 .priceCard, .newsCard{
     opacity: 0.95;
 }

@@ -38,7 +38,13 @@
                     <!-- Worker 1 -->
                     <div class="worker card">
                         <div class="card-block">
-                            <h3 class="text-left">Massive Server Farm - Huge Compute Power</h3>
+                            <div class="d-flex justify-contents-between">
+                                <h3 class="text-left">Massive Server Farm - Huge Compute Power</h3>
+                                <button class="btn btn-primary btn-fab btn-round" data-toggle="modal" data-target="#workerModal">
+                                    <i class="material-icons">info</i>
+                                </button>     
+                            </div>
+
                             <p>Compute power</p>
                             <div class="progress progress-line-primary">
                                 
@@ -105,31 +111,44 @@
                 </div>
 
                 <div class="col-md-6">
-                    <div class="form gBlock card">
-                        <h3>Transaction</h3>
-                        <div class="form-group">
-                            <label for="from" class="bmd-label-floating">From</label>
-                            <input type="email" class="form-control" id="from" minlength="1">
-                            <span class="bmd-help">Enter the name of the person (or wallet address) of the person sending SDC</span>
+                    <div class="gBlock card" >
+                        <div class="transactHeader d-flex justify-content-between align-items-center">
+                            <h3>Transaction</h3>
+                            <button class="btn btn-primary btn-fab btn-round" data-toggle="modal" data-target="#transactModal">
+                                    <i class="material-icons">info</i>
+                            </button>        
+
                         </div>
-                        <div class="form-group">
-                            <label for="to" class="bmd-label-floating">To</label>
-                            <input type="text" class="form-control" id="to">
-                            <span class="bmd-help">Enter the name of the person (or wallet address) of the person receiving SDC</span>
-                        </div>
-                        <div class="form-group">
-                            <label for="amount" class="bmd-label-floating">Amount</label>
-                            <input type="number" class="form-control" id="amount">
-                            <span class="bmd-help">Enter the amount of SDC to transfer</span>
-                        </div>    
-                        <div id="generateButtonDiv" class="d-flex flex-row justify-content-between">
-                            <p id="currentDateTime"></p>
-                            <button id="generateButton" type="submit" class="btn btn-primary">Transfer</button>
-                        </div>
+                        <form>
+                            <div class="form-group">
+                                <label for="from" class="bmd-label-floating">From</label>
+                                <input type="text" class="form-control" id="from" minlength="1">
+                                <span class="bmd-help">Enter the name of the person (or wallet address) of the person sending SDC</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="to" class="bmd-label-floating">To</label>
+                                <input type="text" class="form-control" id="to">
+                                <span class="bmd-help">Enter the name of the person (or wallet address) of the person receiving SDC</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="amount" class="bmd-label-floating">Amount (of SDC)</label>
+                                <input type="number" class="form-control" id="amount">
+                                <span class="bmd-help">Enter the amount of SDC to transfer</span>
+                            </div>    
+                            <div id="generateButtonDiv" class="d-flex flex-row justify-content-between">
+                                <p id="currentDateTime"></p>
+                                <input id="generateButton" value="Transfer" class="btn btn-primary">
+                            </div>
+                        </form>
                     </div>
 
                     <div class="blockchainDiv card">
-                        <h3> sdeaghCoin(SDC) - Blockchain</h3>
+                        <div class="d-flex justify-content-between">
+                            <h3> sdeaghCoin(SDC) - Blockchain</h3>
+                            <button class="btn btn-primary btn-fab btn-round data-toggle="modal" data-target="#blockchainModal"">
+                                <i class="material-icons">info</i>
+                            </button>    
+                        </div>  
                         <hr>
                         <div id="blockchainDiv" class="theChain">
                             <!-- the chain will go here -->
@@ -149,6 +168,104 @@
             </div>
         </div>
 
+        <!-- Worker Modal -->
+        <div class="modal fade" id="workerModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Workers</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="material-icons">clear</i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            The workers (or miners) are tasked with uncovering new coins and do this by computing a complex algorithm.
+                            Each worker is a powerful computer that runs the blockchain software and helps to keep it running by participating in the relay of information.
+                            Anyone can run a worker, you just download the blockchain software and leave a certain port open (the drawback is that it consumes energy and storage space – the bitcoin network at time of writing takes up about 150GB).
+                            
+                        </p>
+                        <p>
+                            The workers take a transaction (or block) and add it to the blockchain. They do this by solving a complex mathematical puzzle 
+                            and including the answer in the block. The puzzle that needs solving is to find a number that, when combined with the data in the block and passed through a hash 
+                            function, produces a result that is within a certain range. In this exmaple the puzzle is to find a hash that starts "00f0". Real blockchains, like Bitcoin, have a much harder puzzle to solve.
+                        <p>
+                            The number that solves the puzzle is called a “nonce”, which is a concatenation of “number used once.”
+                        </p>
+                        </p>
+                        <p>
+                            The more compute power you have, the more likely you are to find the nonce and claim the reward. 
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger btn-link" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  End Modal -->
+
+        <!-- Transaction Modal -->
+        <div class="modal fade" id="transactModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Transaction</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <i class="material-icons">clear</i>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>
+                                Blockchains can theoretically store anything is a secure and distributed manner. In this example we
+                                are storing transactions of the imaginary sdeaghCoin (SDC). Whichever worker can prove the block by guessing the nonce 
+                                will be rewarded with a random amount (between 1 and 6) of SDC.                                
+                            </p>
+                            <p>
+                                Enter your information in the fields below and hit transfer. The input data along with the index, the current date and time
+                                 and the previous hash constitute the block to be 'solved'. This block is passed to all the workers who then attempt to solve the 
+                                 algrorithm, i.e. find the nonce.
+                            </p>
+
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger btn-link" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  End Modal -->
+
+            <!-- Blockchain Modal -->
+            <div class="modal fade" id="transactModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Transaction</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <i class="material-icons">clear</i>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>
+                                In this section you will see the actual blockchain for seaghCoin. Each block has been calculated
+                                so that the hashed value of the data, the previous block's hash
+                                                          
+                            </p>
+                            <p>
+                                E
+                            </p>
+
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger btn-link" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  End Modal -->
     
 
     <!--   Core JS Files   -->
