@@ -41,6 +41,7 @@ class Block {
 class Blockchain {
     constructor() {
         this.chain = [];
+        
     }
 
     getLatestBlock() {
@@ -52,7 +53,7 @@ class Blockchain {
     }
 
     displayLatest() {
-        
+
     }
 
 }
