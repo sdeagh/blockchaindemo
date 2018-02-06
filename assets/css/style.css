@@ -1,0 +1,107 @@
+@keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 100% 0; }
+}
+
+
+
+body{
+    background: none;
+    color: white;
+    font-size: 18px;
+    padding: 8px;
+}
+
+html {
+    background-image: url("../img/bc06.jpeg");
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:100%;
+    background-position: center;
+    background-position: 0px 0px;
+	animation: animatedBackground 90s linear infinite;
+}
+
+.header{
+    padding: 24px;
+}
+
+.worker{
+    border: 2px solid white;
+    background-color: white;
+    opacity: 0.95;
+    padding: 8px;
+}
+
+.rewardsDiv{
+    display: inline-block;
+    float: right;
+}
+
+h1 {
+    letter-spacing: 1.1rem;
+    color: lightgray;
+    font-weight: 600;
+}
+
+h3, h2 {
+    font-weight: 600;
+}
+
+.gBlock{
+    /*margin: 20px;*/
+    background: white;
+    color: black;
+    opacity: 0.95;
+    padding: 16px;
+    box-shadow: 0 4px 8px 0 rgba(173,216,230 ,0.5), 0 6px 20px 0 rgba(173,216,230 ,0.6);
+}
+
+.blockchainDiv {
+    background-color: white;
+    color: black;
+    opacity: 0.95;
+    padding: 16px;
+
+}
+.form-control {
+    font-size: 18px;
+    color: black;
+}
+
+.form-control:focus {
+    font-size: 18px;
+    color: black;
+}
+
+.form-control[readonly]{
+    background-color: white;
+}
+
+.loader {
+    border: 3px solid #f3f3f3; /* Light grey */
+    border-top: 3px solid #8F2CA1; /* Blue */
+    border-radius: 50%;
+    width: 47px;
+    height: 47px;
+    animation: spin 2s linear infinite;
+    margin-left:16px;
+}
+
+.hidden{
+    display: none;
+}
+
+.tick {
+    color: #8F2CA1;
+    font-size: 27px;
+    padding-top:10px;
+    margin-left: 6px;
+    font-weight: 600;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
