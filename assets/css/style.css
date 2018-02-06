@@ -49,6 +49,16 @@ h3, h2 {
     font-weight: 600;
 }
 
+.addNewWorker{
+    margin: 0 auto;
+}
+
+#addNewOne{
+    /* color: #8F2CA1;
+    font-size: 2em;
+    font-weight: 600;
+    margin: 0 auto; */
+}
 .gBlock{
     /*margin: 20px;*/
     background: white;
@@ -83,8 +93,8 @@ h3, h2 {
     border: 3px solid #f3f3f3; /* Light grey */
     border-top: 3px solid #8F2CA1; /* Blue */
     border-radius: 50%;
-    width: 47px;
-    height: 47px;
+    width: 25px;
+    height: 25px;
     animation: spin 2s linear infinite;
     margin-left:16px;
 }
@@ -96,13 +106,40 @@ h3, h2 {
 .tick {
     color: #8F2CA1;
     font-size: 27px;
-    padding-top:10px;
     margin-left: 6px;
     font-weight: 600;
 }
 
 .chainLabel {
     text-transform: capitalize;
+}
+
+.priceCard, .newsCard{
+    opacity: 0.95;
+}
+
+.btcwdgt-text-ticker.btcwdgt-light .btcwdgt-edge {
+    background-color: #8F2CA1 !important;
+}
+
+.btcwdgt-s-price.btcwdgt-light {
+    margin: 0px !important;
+    width: 100% !important;
+    max-width: none !important;
+    border-radius: 6px !important;
+    opacity: 0.95 !important;
+}
+
+.btcwdgt-headlines.btcwdgt-light .btcwdgt-header{
+    background-color: #8F2CA1 !important;
+}
+
+.btcwdgt-headlines.btcwdgt-light {
+    margin: 0px !important;
+    width: 100% !important;
+    max-width: none !important;
+    border-radius: 6px !important;
+    opacity: 0.95 !important;
 }
 
 @keyframes spin {

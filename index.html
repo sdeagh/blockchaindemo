@@ -12,117 +12,144 @@
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
 
+        <script>
+                (function(b,i,t,C,O,I,N) {
+                    window.addEventListener('load',function() {
+                    if(b.getElementById(C))return;
+                    I=b.createElement(i),N=b.getElementsByTagName(i)[0];
+                    I.src=t;I.id=C;N.parentNode.insertBefore(I, N);
+                    },false)
+                })(document,'script','https://widgets.bitcoin.com/widget.js','btcwdgt');
+            </script>
+
         <!-- Material Kit CSS -->
         <link rel="stylesheet" href="./assets/css/material-kit.min.css">
         <link rel="stylesheet" href="./assets/css/style.css">
 
     </head>
     <body>
-        <div class="header text-center">
-            <h1>BLOCKCHAIN DEMO</h1>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-4">
-                <!-- Worker 1 -->
-                <div class="worker card">
-                    <div class="card-block">
-                        <h3 class="text-left">Massive Server Farm - Huge Compute Power</h3>
-                        <p>Compute power</p>
-                        <div class="progress progress-line-primary">
-                            
-                            <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%;"></div>
-                        </div>
-
-                        <div class="workerInfo d-flex flex-row justify-content-between">
-                            <p class="card-text">Total Rewards:
-                                <span id="rewardsSpan1" class="card-text">4 SDC</span>
-                            </p>
-                        </div>
-                        <div class="workerStatus d-flex justify-content-left">
-                            <h4 id="status1">Waiting for job</h4><i id="tick1" class="material-icons tick hidden ">done</i>
-                            <div class="loader hidden "></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Worker 2 -->       
-                <div class="worker card">
-                    <div class="card-block">
-                        <h3 class="text-left">Little Johnny - Owns A PC With Single GPU Card</h3>
-                        <p>Compute power</p>
-                        <div class="progress progress-line-primary">
-                            <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:10%;"></div>
-                        </div>
-
-
-                        <div class="workerInfo d-flex flex-row justify-content-between">
-                            <p class="card-text">Total Rewards:
-                                <span id="rewardsSpan2" class="card-text">4 SDC</span>
-                            </p>
-                        </div>
-                        <div class="workerStatus d-flex justify-content-left">
-                            <h4 id="status2">Waiting for job</h4><i id="tick2" class="material-icons tick hidden ">done</i>
-                            <div class="loader hidden "></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Worker 3 -->       
-                <div class="worker card">
-                    <div class="card-block">
-                        <h3 class="text-left">Techie Tim - Built His Own Mining Rig with 8 GPUs</h3>
-                        <p>Compute power</p>
-                        <div class="progress progress-line-primary">
-                            <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:30%;"></div>
-                        </div>
-
-                        <div class="workerInfo d-flex flex-row justify-content-between">
-                            <p class="card-text">Total Rewards:
-                                <span id="rewardsSpan3" class="card-text">4 SDC</span>
-                            </p>
-                        </div>
-                        <div class="workerStatus d-flex justify-content-left">
-                            <h4 id="status3">Waiting for job</h4><i id="tick3" class="material-icons tick hidden ">done</i>
-                            <div class="loader hidden "></div>
-                        </div>
-                    </div>
-                </div>
+        <div class="container-fluid">
+            <div class="header text-center">
+                <h1>BLOCKCHAIN DEMO</h1>
             </div>
+            
+            <div class="row">
+                <div class="col-md-3">
+                    <!-- Worker 1 -->
+                    <div class="worker card">
+                        <div class="card-block">
+                            <h3 class="text-left">Massive Server Farm - Huge Compute Power</h3>
+                            <p>Compute power</p>
+                            <div class="progress progress-line-primary">
+                                
+                                <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%;"></div>
+                            </div>
 
-            <div class="col-md-6">
-                <div class="gBlock card">
-                        <h3>Transaction</h3>
-                    <div class="form-group">
-                        <label for="from" class="bmd-label-floating">From</label>
-                        <input type="text" class="form-control" id="from">
-                        <span class="bmd-help">Enter the name of the person (or wallet address) of the person sending SDC</span>
+                            <div class="workerInfo d-flex flex-row justify-content-between">
+                                <p class="card-text">Total Rewards:
+                                    <span id="rewardsSpan1" class="card-text">4 SDC</span>
+                                </p>
+                            </div>
+                            <div class="workerStatus d-flex justify-content-left align-items-center">
+                                <h4 id="status1">Waiting for job</h4><i id="tick1" class="material-icons tick hidden ">done</i>
+                                <div class="loader hidden "></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="to" class="bmd-label-floating">To</label>
-                        <input type="text" class="form-control" id="to">
-                        <span class="bmd-help">Enter the name of the person (or wallet address) of the person receiving SDC</span>
+                    <!-- Worker 2 -->       
+                    <div class="worker card">
+                        <div class="card-block">
+                            <h3 class="text-left">Little Johnny - Owns A PC With Single GPU Card</h3>
+                            <p>Compute power</p>
+                            <div class="progress progress-line-primary">
+                                <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:10%;"></div>
+                            </div>
+
+
+                            <div class="workerInfo d-flex flex-row justify-content-between">
+                                <p class="card-text">Total Rewards:
+                                    <span id="rewardsSpan2" class="card-text">4 SDC</span>
+                                </p>
+                            </div>
+                            <div class="workerStatus d-flex justify-content-left align-items-center">
+                                <h4 id="status2">Waiting for job</h4><i id="tick2" class="material-icons tick hidden ">done</i>
+                                <div class="loader hidden "></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="amount" class="bmd-label-floating">Amount</label>
-                        <input type="number" class="form-control" id="amount">
-                        <span class="bmd-help">Enter the amount of SDC to transfer</span>
-                    </div>    
-                    <div id="generateButtonDiv" class="d-flex flex-row justify-content-between">
-                        <p id="currentDateTime"></p>
-                        <button id="generateButton" class="btn btn-primary">Transfer</button>
+                    <!-- Worker 3 -->       
+                    <div class="worker card">
+                        <div class="card-block">
+                            <h3 class="text-left">Techie Tim - Built His Own Mining Rig with 8 GPUs</h3>
+                            <p>Compute power</p>
+                            <div class="progress progress-line-primary">
+                                <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:30%;"></div>
+                            </div>
+
+                            <div class="workerInfo d-flex flex-row justify-content-between">
+                                <p class="card-text">Total Rewards:
+                                    <span id="rewardsSpan3" class="card-text">4 SDC</span>
+                                </p>
+                            </div>
+                            <div class="workerStatus d-flex justify-content-left align-items-center">
+                                <h4 id="status3">Waiting for job</h4><i id="tick3" class="material-icons tick hidden ">done</i>
+                                <div class="loader hidden "></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="addNewWorker d-flex justify-content-center">
+                        <button class="btn btn-primary btn-fab btn-round">
+                            <i class="material-icons">add</i>
+                        </button>        
                     </div>
                 </div>
 
-                <div class="blockchainDiv card">
-                    <div>
+                <div class="col-md-6">
+                    <div class="form gBlock card">
+                        <h3>Transaction</h3>
+                        <div class="form-group">
+                            <label for="from" class="bmd-label-floating">From</label>
+                            <input type="email" class="form-control" id="from" minlength="1">
+                            <span class="bmd-help">Enter the name of the person (or wallet address) of the person sending SDC</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="to" class="bmd-label-floating">To</label>
+                            <input type="text" class="form-control" id="to">
+                            <span class="bmd-help">Enter the name of the person (or wallet address) of the person receiving SDC</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="amount" class="bmd-label-floating">Amount</label>
+                            <input type="number" class="form-control" id="amount">
+                            <span class="bmd-help">Enter the amount of SDC to transfer</span>
+                        </div>    
+                        <div id="generateButtonDiv" class="d-flex flex-row justify-content-between">
+                            <p id="currentDateTime"></p>
+                            <button id="generateButton" type="submit" class="btn btn-primary">Transfer</button>
+                        </div>
+                    </div>
+
+                    <div class="blockchainDiv card">
                         <h3> sdeaghCoin(SDC) - Blockchain</h3>
                         <hr>
                         <div id="blockchainDiv" class="theChain">
                             <!-- the chain will go here -->
                         </div>
+                    </div>
                 </div>
-            </div>
 
+                <div class="col-md-3">
+                    <div class="card priceCard">
+                        <div bw-theme="light" class="btcwdgt-price" bw-cur="usd"></div>
+                    </div>
+                    <div class="card newsCard">
+                        <div bw-theme="light" class="btcwdgt-news"></div>
+                    </div>
+                </div>
+
+            </div>
         </div>
+
+    
 
     <!--   Core JS Files   -->
     <script src="./assets/js/core/jquery.min.js"></script>
