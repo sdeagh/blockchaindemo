@@ -25,11 +25,11 @@ class Workers {
 
 class Block {
     constructor(nonce, index, timestamp, data, previousHash = ''){
-        this.nonce = nonce;
         this.index = index;
         this.timestamp = timestamp;
-        this.data = data;
         this.previousHash = previousHash;
+        this.data = data;
+        this.nonce = nonce;
         this.hash = this.calculateHash(nonce);
     }
 
@@ -41,7 +41,6 @@ class Block {
 class Blockchain {
     constructor() {
         this.chain = [];
-        
     }
 
     getLatestBlock() {
@@ -53,9 +52,37 @@ class Blockchain {
     }
 
     displayLatest() {
+        const block = this.getLatestBlock()
+        let appendToDiv = document.getElementById("blockchainDiv");
 
+        for (var key in block){
+            if (key === "data") {
+                for (var key in block.data) {
+                    let newLabel = createNewElement("DIV", key + ": ");
+                    let newValue = createNewElement("SPAN", block.data[key] + " ");
+                    newLabel.className = "chainLabel";
+                    newLabel.appendChild(newValue);
+                    appendToDiv.appendChild(newLabel)
+                }
+            } else {
+                let newLabel = createNewElement("DIV", key + ": ");
+                let newValue = createNewElement("SPAN", block[key]);
+                newLabel.className = "chainLabel";
+                newLabel.appendChild(newValue);
+                appendToDiv.appendChild(newLabel)
+            }
+            var lineBreak = document.createElement("BR");
+        }
+        var horizontalRow = document.createElement("HR");
+        appendToDiv.appendChild(horizontalRow);
     }
+}
 
+function createNewElement(type, text){
+    const newElement = document.createElement(type);
+    const newText = document.createTextNode(text);
+    newElement.appendChild(newText);
+    return newElement;
 }
 
 function displayDetails(workers, chain) {
@@ -120,11 +147,11 @@ function calculateWinner(){
         tick1.classList.toggle("hidden");
         myWorkers.workers[0].rewards += reward
     } else if (randomNumber >= 60 && randomNumber < 90) {
-        messageFld3.textContent = "Yay! Found the nonce, block reward is " + reward + " SDC";
+        messageFld3.textContent = "Success! Block reward is " + reward + " SDC";
         tick3.classList.toggle("hidden");
         myWorkers.workers[2].rewards += reward
     } else {
-        messageFld2.textContent = "Yay! Found the nonce, block reward is " + reward + " SDC";
+        messageFld2.textContent = "Success! Block reward is  " + reward + " SDC";
         tick2.classList.toggle("hidden");
         myWorkers.workers[1].rewards += reward
     }
@@ -157,13 +184,19 @@ generateBtn.addEventListener("click", function(){
     toggleLoaders();
 
     setTimeout(function() {
-        doWork({from: "Brian", to: "Jo", amount: 30});
+        data = {
+            from: document.getElementById("from").value,
+            to: document.getElementById("to").value,
+            amount: document.getElementById("amount").value
+        }
+        doWork(data);
         updateWorkerStatus("Waiting for next job");
         toggleLoaders();
         calculateWinner();
-    }, 2000)
+        sdeaghCoin.displayLatest();
 
-    
+    }, 1000)
+
 
 })
 
