@@ -12,16 +12,6 @@
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
 
-        <script>
-                (function(b,i,t,C,O,I,N) {
-                    window.addEventListener('load',function() {
-                    if(b.getElementById(C))return;
-                    I=b.createElement(i),N=b.getElementsByTagName(i)[0];
-                    I.src=t;I.id=C;N.parentNode.insertBefore(I, N);
-                    },false)
-                })(document,'script','https://widgets.bitcoin.com/widget.js','btcwdgt');
-            </script>
-
         <!-- Material Kit CSS -->
         <link rel="stylesheet" href="./assets/css/material-kit.min.css">
         <link rel="stylesheet" href="./assets/css/style.css">
@@ -38,16 +28,14 @@
                     <!-- Worker 1 -->
                     <div class="worker card">
                         <div class="card-block">
-                            <div class="d-flex justify-contents-between">
-                                <h3 class="text-left">Massive Server Farm - Huge Compute Power</h3>
-                                <button class="btn btn-primary btn-fab btn-round" data-toggle="modal" data-target="#workerModal">
+                            <div class="d-flex justify-content-between">
+                                <h4 class="text-left">Server Farm</h4>
+                                <button class="btn btn-primary btn-fab btn-round btn-sm" data-toggle="modal" data-target="#workerModal">
                                     <i class="material-icons">info</i>
                                 </button>     
                             </div>
 
-                            <p>Compute power</p>
                             <div class="progress progress-line-primary">
-                                
                                 <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%;"></div>
                             </div>
 
@@ -57,7 +45,7 @@
                                 </p>
                             </div>
                             <div class="workerStatus d-flex justify-content-left align-items-center">
-                                <h4 id="status1">Waiting for job</h4><i id="tick1" class="material-icons tick hidden ">done</i>
+                                <h6 id="status1">Waiting for job</h6><i id="tick1" class="material-icons tick hidden ">done</i>
                                 <div class="loader hidden "></div>
                             </div>
                         </div>
@@ -65,8 +53,7 @@
                     <!-- Worker 2 -->       
                     <div class="worker card">
                         <div class="card-block">
-                            <h3 class="text-left">Little Johnny - Owns A PC With Single GPU Card</h3>
-                            <p>Compute power</p>
+                            <h4 class="text-left">Single GPU</h4>
                             <div class="progress progress-line-primary">
                                 <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:10%;"></div>
                             </div>
@@ -78,7 +65,7 @@
                                 </p>
                             </div>
                             <div class="workerStatus d-flex justify-content-left align-items-center">
-                                <h4 id="status2">Waiting for job</h4><i id="tick2" class="material-icons tick hidden ">done</i>
+                                <h6 id="status2">Waiting for job</h6><i id="tick2" class="material-icons tick hidden ">done</i>
                                 <div class="loader hidden "></div>
                             </div>
                         </div>
@@ -86,8 +73,7 @@
                     <!-- Worker 3 -->       
                     <div class="worker card">
                         <div class="card-block">
-                            <h3 class="text-left">Techie Tim - Built His Own Mining Rig with 8 GPUs</h3>
-                            <p>Compute power</p>
+                            <h4 class="text-left">Mining Rig</h4>
                             <div class="progress progress-line-primary">
                                 <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:30%;"></div>
                             </div>
@@ -98,7 +84,7 @@
                                 </p>
                             </div>
                             <div class="workerStatus d-flex justify-content-left align-items-center">
-                                <h4 id="status3">Waiting for job</h4><i id="tick3" class="material-icons tick hidden ">done</i>
+                                <h6 id="status3">Waiting for job</h6><i id="tick3" class="material-icons tick hidden ">done</i>
                                 <div class="loader hidden "></div>
                             </div>
                         </div>
@@ -113,8 +99,8 @@
                 <div class="col-md-6">
                     <div class="gBlock card" >
                         <div class="transactHeader d-flex justify-content-between align-items-center">
-                            <h3>Transaction</h3>
-                            <button class="btn btn-primary btn-fab btn-round" data-toggle="modal" data-target="#transactModal">
+                            <h4>Transaction</h4>
+                            <button class="btn btn-primary btn-fab btn-round btn-sm" data-toggle="modal" data-target="#transactModal">
                                     <i class="material-icons">info</i>
                             </button>        
 
@@ -135,7 +121,7 @@
                                 <input type="number" class="form-control" id="amount">
                                 <span class="bmd-help">Enter the amount of SDC to transfer</span>
                             </div>    
-                            <div id="generateButtonDiv" class="d-flex flex-row justify-content-between">
+                            <div id="generateButtonDiv" class="d-flex flex-row justify-content-between align-items-baseline">
                                 <p id="currentDateTime"></p>
                                 <input id="generateButton" value="Transfer" class="btn btn-primary">
                             </div>
@@ -144,8 +130,8 @@
 
                     <div class="blockchainDiv card">
                         <div class="d-flex justify-content-between">
-                            <h3> sdeaghCoin(SDC) - Blockchain</h3>
-                            <button class="btn btn-primary btn-fab btn-round data-toggle="modal" data-target="#blockchainModal"">
+                            <h4> sdeaghCoin(SDC) - Blockchain</h4>
+                            <button class="btn btn-primary btn-fab btn-round btn-sm" data-toggle="modal" data-target="#blockchainModal">
                                 <i class="material-icons">info</i>
                             </button>    
                         </div>  
@@ -217,7 +203,7 @@
                         </div>
                         <div class="modal-body">
                             <p>
-                                Blockchains can theoretically store anything is a secure and distributed manner. In this example we
+                                Blockchains can theoretically store anything in a secure and distributed manner. In this example we
                                 are storing transactions of the imaginary sdeaghCoin (SDC). Whichever worker can prove the block by guessing the nonce 
                                 will be rewarded with a random amount (between 1 and 6) of SDC.                                
                             </p>
@@ -238,7 +224,7 @@
             <!--  End Modal -->
 
             <!-- Blockchain Modal -->
-            <div class="modal fade" id="transactModal" tabindex="-1" role="dialog">
+            <div class="modal fade" id="blockchainModal" tabindex="-1" role="dialog">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -249,12 +235,15 @@
                         </div>
                         <div class="modal-body">
                             <p>
-                                In this section you will see the actual blockchain for seaghCoin. Each block has been calculated
-                                so that the hashed value of the data, the previous block's hash
+                                In this section you will see the actual blockchain for sdeaghCoin. Each block has been calculated
+                                so that the hashed value of the data, the previous block's hash, the index and the nonce start with "00f0"
                                                           
                             </p>
                             <p>
-                                E
+                                The security of the blockchain comes from having a distributed system and the 'chain' effect
+                                of always using the previous hash in the new calculation. If somebody attempted to modify some data 
+                                the calculation of the nonce would no longer be valid - it would require a different noce to make the hash start "00f0". Other workers or nodes in the distributed system 
+                                would pick this up and invalidate the change.
                             </p>
 
 
@@ -267,6 +256,16 @@
             </div>
             <!--  End Modal -->
     
+
+    <script>
+        (function(b,i,t,C,O,I,N) {
+            window.addEventListener('load',function() {
+            if(b.getElementById(C))return;
+            I=b.createElement(i),N=b.getElementsByTagName(i)[0];
+            I.src=t;I.id=C;N.parentNode.insertBefore(I, N);
+            },false)
+        })(document,'script','https://widgets.bitcoin.com/widget.js','btcwdgt');
+    </script>
 
     <!--   Core JS Files   -->
     <script src="./assets/js/core/jquery.min.js"></script>

@@ -143,15 +143,15 @@ function calculateWinner(){
     const randomNumber = Math.floor(Math.random() * 100);
     const reward = Math.floor((Math.random() * 6) + 1);
     if (randomNumber < 60) {
-        messageFld1.textContent = "Success! Block reward is " + reward + " SDC";
+        messageFld1.textContent = "Block reward is " + reward + " SDC";
         tick1.classList.toggle("hidden");
         myWorkers.workers[0].rewards += reward
     } else if (randomNumber >= 60 && randomNumber < 90) {
-        messageFld3.textContent = "Success! Block reward is " + reward + " SDC";
+        messageFld3.textContent = "Block reward is " + reward + " SDC";
         tick3.classList.toggle("hidden");
         myWorkers.workers[2].rewards += reward
     } else {
-        messageFld2.textContent = "Success! Block reward is  " + reward + " SDC";
+        messageFld2.textContent = "Block reward is  " + reward + " SDC";
         tick2.classList.toggle("hidden");
         myWorkers.workers[1].rewards += reward
     }
@@ -193,8 +193,14 @@ generateBtn.addEventListener("click", function(){
         toggleLoaders();
         calculateWinner();
         sdeaghCoin.displayLatest();
+        document.getElementById("from").value="";
+        document.getElementById("to").value="";
+        document.getElementById("amount").value="";
 
     }, 1000)
+
+    
+
 })
 
 
