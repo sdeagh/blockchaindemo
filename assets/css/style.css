@@ -15,7 +15,7 @@ body{
 html {
     background-image: url("../img/bc06.jpeg");
     background-color: white;
-    background-size: cover;
+    /* background-size: cover; */
     background-repeat: no-repeat;
     background-attachment: fixed;
     height:100%;
@@ -25,7 +25,6 @@ html {
 }
 
 .header{
-    padding: 12px;
 }
 
 .worker{
