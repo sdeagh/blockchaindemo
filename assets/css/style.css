@@ -24,19 +24,11 @@ html {
 	animation: animatedBackground 90s linear infinite;
 }
 
-.header{
-}
-
 .worker{
     border: 2px solid white;
     background-color: white;
     opacity: 0.95;
     padding: 8px;
-}
-
-.rewardsDiv{
-    display: inline-block;
-    float: right;
 }
 
 h1 {

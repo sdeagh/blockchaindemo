@@ -34,7 +34,7 @@ class Block {
     }
 
     calculateHash(nonce){
-        return Sha256.hash(this.nonce + this.index + this.timestamp + JSON.stringify(this.data).toString() + this.previousHash)
+        return sha256(this.nonce + this.index + this.timestamp + JSON.stringify(this.data).toString() + this.previousHash)
     }
 }
 
